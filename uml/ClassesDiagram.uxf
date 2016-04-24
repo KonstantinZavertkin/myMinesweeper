@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.1.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>20</y>
+      <w>190</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Cell
+--
+-opened: bool;
+-bomb: bool;
+-flag: bool;
+-numberOfBombs;
+--
++isBomb()
++putBomb()
++isFlag()
++changeFlag()
++getNumOfBombsAround()
++setNumOfBombAround()
++isOpened()
++setOpened()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>20</y>
+      <w>250</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>FieldGenerator
+--
+-array: vector&lt;vector&lt;Cell&gt; &gt;
+-cell: Cell
+-x: int
+-y: int
+-amountOfBombs: int
+--
++prepareArray(x: int, y: int)
++putBombs(amount: int)
++calcAmountOfBombs()
++getField(): vector&lt;vector&lt;Cell&gt; &gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>130</y>
+      <w>260</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>Field
+--
+-field: vector&lt;vector&lt;Cell&gt; &gt;
+-image: vector&lt;vector&lt;char&gt; &gt;
+-generator: FieldGenerator
+-sizeX: int
+-sizeY: int
+-amountOfBombs: int
+--
++createField(x, y, amount)
++changeFlag(x, y)
++openCell(x, y)
++getValue(x, y): int
++isBomb(x, y): bool
++isOpened(x, y): bool
++getImage(): vector&lt;vector&lt;char&gt; &gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>400</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>StepAction
+--
+-field: Field
+-x: int
+-y: int
+-currentAction: char
+--
++performAction(x, y, action)
++changeFlag()
++pushClosedCell()
++pushOpenedCell()
++multipleOpen()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>60</y>
+      <w>440</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;420.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>170</x>
+      <y>300</y>
+      <w>150</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>550</x>
+      <y>160</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>580</x>
+      <y>410</y>
+      <w>300</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>MinesweeperGame
+--
+-field: Field
+-step: ExecuteStep
+-gameOver: bool
+-amountOfOpenedCells: int
+-x:int
+-y:int
+--
++initializeField(sizeX:int, sizeY:int, amount:int)
++performStep(x:int, y:int, action:char)
++getImage(): vector&lt;vector&lt;char&gt; &gt;
++isGameOver(): bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>250</x>
+      <y>470</y>
+      <w>350</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;330.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>550</x>
+      <y>300</y>
+      <w>150</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0;130.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>230</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
