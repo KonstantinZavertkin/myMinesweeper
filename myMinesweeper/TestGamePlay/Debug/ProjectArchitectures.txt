@@ -1,0 +1,2 @@
+C:\myPrograms\myMinesweeper\myMinesweeper\GamePlay\GamePlay.vcxproj;x86
+C:\myPrograms\myMinesweeper\myMinesweeper\TestGamePlay\TestGamePlay.vcxproj;x86

@@ -1,0 +1,6 @@
+﻿  pch.cpp
+  Cell.cpp
+  Field.cpp
+  FieldGenerator.cpp
+  GamePlay.cpp
+  GamePlay.vcxproj -> C:\myPrograms\myMinesweeper\myMinesweeper\Debug\GamePlay\GamePlay.lib

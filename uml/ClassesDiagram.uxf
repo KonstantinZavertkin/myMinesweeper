@@ -7,7 +7,7 @@
       <x>30</x>
       <y>20</y>
       <w>190</w>
-      <h>220</h>
+      <h>240</h>
     </coordinates>
     <panel_attributes>Cell
 --
@@ -17,18 +17,19 @@
 -numberOfBombs;
 --
 +isBomb()
-+isFlag()
-+getNumOfBombsAround()
-+changeFlag()
 +putBomb()
-+setNumOfBomb()
++isFlag()
++changeFlag()
++getNumOfBombsAround()
++setNumOfBombAround()
++isOpened()
 +setOpened()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>620</x>
+      <x>630</x>
       <y>20</y>
       <w>250</w>
       <h>190</h>
@@ -100,23 +101,12 @@
     <id>Relation</id>
     <coordinates>
       <x>210</x>
-      <y>200</y>
-      <w>110</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>210</x>
       <y>60</y>
-      <w>430</w>
+      <w>440</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;410.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;420.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -134,11 +124,11 @@
     <coordinates>
       <x>550</x>
       <y>160</y>
-      <w>90</w>
+      <w>100</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -184,5 +174,16 @@
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;130.0;10.0;130.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>230</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
