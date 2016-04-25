@@ -3,4 +3,7 @@
   Field.cpp
   FieldGenerator.cpp
   GamePlay.cpp
+  MinesweeperGame.cpp
+  StepAction.cpp
+GamePlay.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
   GamePlay.vcxproj -> C:\myPrograms\myMinesweeper\myMinesweeper\Debug\GamePlay\GamePlay.lib

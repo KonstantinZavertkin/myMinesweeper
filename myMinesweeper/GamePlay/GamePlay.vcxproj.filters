@@ -12,6 +12,8 @@
     <ClCompile Include="Field.cpp" />
     <ClCompile Include="Cell.cpp" />
     <ClCompile Include="FieldGenerator.cpp" />
+    <ClCompile Include="StepAction.cpp" />
+    <ClCompile Include="MinesweeperGame.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GamePlay.h" />
@@ -20,5 +22,7 @@
     <ClInclude Include="Field.h" />
     <ClInclude Include="Cell.h" />
     <ClInclude Include="FieldGenerator.h" />
+    <ClInclude Include="StepAction.h" />
+    <ClInclude Include="MinesweeperGame.h" />
   </ItemGroup>
 </Project>
