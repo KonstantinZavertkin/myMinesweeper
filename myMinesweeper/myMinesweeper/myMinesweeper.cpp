@@ -11,7 +11,6 @@ int _tmain(int argc, _TCHAR* argv[])
 {
    Field field;
    field.createField( 20, 20, 40 );
-   //StepAction stepAction( 20, 20, field );
    MinesweeperGame minesweeper;
    minesweeper.initializeField(20, 20, 40);
    field = minesweeper.getField();
@@ -80,6 +79,24 @@ int _tmain(int argc, _TCHAR* argv[])
    */
    
    minesweeper.performStep(0, 0, 'q');
+   field = minesweeper.getField();
+
+   minesweeper.performStep(1, 4, 'f');
+   field = minesweeper.getField();
+
+   minesweeper.performStep(0, 3, 'q');
+   field = minesweeper.getField();
+
+   minesweeper.performStep(13, 3, 'f');
+   field = minesweeper.getField();
+
+   minesweeper.performStep(12, 4, 'q');
+   field = minesweeper.getField();
+
+   minesweeper.performStep(13, 4, 'q');
+   field = minesweeper.getField();
+
+   minesweeper.performStep(14, 4, 'q');
    field = minesweeper.getField();
 
 

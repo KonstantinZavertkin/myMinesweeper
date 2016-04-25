@@ -19,28 +19,25 @@ void StepAction::changeFlag( int x, int y )
    field.changeFlag( x, y );
 }
 
-int StepAction::square(int x, int y , char type )
+int StepAction::getAmountOfFlagsInSquare(int x, int y )
 {
    int localAmountOfType = 0;
-   for( int j = ( x - 1 ); j <= ( x + 1 ); ++j )
+   for( int j = ( y - 1 ); j <= ( y + 1 ); ++j )
    {
-      for( int i = ( y - 1 ); i <= ( y + 1 ); ++i )
+      for( int i = ( x - 1 ); i <= ( x + 1 ); ++i )
       {
          if( ( i >= 0 ) && ( i < sizeY ) && ( j >= 0 ) && ( j < sizeX ) )
          {
-            if( type == 'f' )
+            if( field.isFlag( i, j ) )
             {
-               if( field.isFlag( y, x ) )
-               {
-                  ++localAmountOfType;
-               }
+               localAmountOfType++;
             }
          }
       }
    }
    return localAmountOfType;
 };
-void StepAction::tryOpen( int x, int y, char type )
+void StepAction::tryOpen( int x, int y )
 {
    if( field.isFlag( x, y ) )
    {
@@ -50,7 +47,8 @@ void StepAction::tryOpen( int x, int y, char type )
    {
       if( field.isOpened( x, y ) )
       {
-         if( field.getValue( x, y ) == square( x, y, 'f' ) )
+         
+         if( field.getValue( x, y ) == getAmountOfFlagsInSquare( x, y ) )
          {
             openCells( x, y );
          }
@@ -63,8 +61,29 @@ void StepAction::tryOpen( int x, int y, char type )
 }
 void StepAction::openCells( int x, int y )
 {
-   
-   if( field.getValue( x, y ) != 0 )
+   for( int j = ( y - 1 ); j <= ( y + 1 ); ++j )
+   {
+      for( int i = ( x - 1 ); i <= ( x + 1 ); ++i )
+      {
+         if( ( i >= 0 ) && ( i < sizeX ) && ( j >= 0 ) && ( j < sizeY ) )
+         {
+            if( !( ( i == x ) && ( j == y ) ) )
+            {
+               if( !field.isOpened( i, j ) && !field.isFlag( i, j ))
+               {
+                  field.setOpened( i, j );
+                  if( field.getValue( i, j ) == 0 )
+                  {
+                     openCells( i, j );
+                  }
+                  
+               }
+            }
+         }
+      }
+   }
+     
+   /*if( field.getValue( x, y ) != 0 )
    {
       if( !field.isOpened( x, y ) )
       {
@@ -90,7 +109,7 @@ void StepAction::openCells( int x, int y )
             }
          }
       }
-   }
+   }*/
 };
 void StepAction::performAction( int x, int y, char currentAction )
 {
@@ -100,6 +119,6 @@ void StepAction::performAction( int x, int y, char currentAction )
    }
    else
    {
-      tryOpen( x, y , '\0');
+      tryOpen( x, y );
    }
 };
