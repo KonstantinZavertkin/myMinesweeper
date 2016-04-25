@@ -12,7 +12,7 @@ int _tmain(int argc, _TCHAR* argv[])
    Field field;
    field.createField( 20, 20, 40 );
    MinesweeperGame minesweeper;
-   minesweeper.initializeField(20, 20, 40);
+   minesweeper.initializeField( 20, 20, 40 );
    field = minesweeper.getField();
    
    for( int i = 0; i < 20; i++ )
@@ -78,7 +78,7 @@ int _tmain(int argc, _TCHAR* argv[])
    field = stepAction.getField();
    */
    
-   minesweeper.performStep(0, 0, 'q');
+   /*minesweeper.performStep(0, 0, 'q');
    field = minesweeper.getField();
 
    minesweeper.performStep(1, 4, 'f');
@@ -94,7 +94,7 @@ int _tmain(int argc, _TCHAR* argv[])
    field = minesweeper.getField();
 
    minesweeper.performStep(13, 4, 'q');
-   field = minesweeper.getField();
+   field = minesweeper.getField();*/
 
    minesweeper.performStep(14, 4, 'q');
    field = minesweeper.getField();

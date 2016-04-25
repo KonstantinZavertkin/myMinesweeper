@@ -8,8 +8,7 @@ void StepAction::initialStepAction( int sizeX, int sizeY, Field field )
    this -> field = field;
    this -> sizeX = sizeX;
    this -> sizeY = sizeY;
-}
-
+};
 Field StepAction::getField()
 {
    return field;
@@ -17,8 +16,7 @@ Field StepAction::getField()
 void StepAction::changeFlag( int x, int y )
 {
    field.changeFlag( x, y );
-}
-
+};
 int StepAction::getAmountOfFlagsInSquare(int x, int y )
 {
    int localAmountOfType = 0;
