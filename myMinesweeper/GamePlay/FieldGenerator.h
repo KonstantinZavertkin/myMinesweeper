@@ -8,7 +8,7 @@ class FieldGenerator
 {
 private:
    vector<vector<Cell>> arrayOfCells;
-   Cell cell;
+   //Cell cell;
    int sizeX;
    int sizeY;
    int amountOfBombs;

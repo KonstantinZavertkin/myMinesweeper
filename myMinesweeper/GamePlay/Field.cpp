@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Field::Field( int sizeX, int sizeY, int amountOfBombs )
+void Field::createField( int sizeX, int sizeY, int amountOfBombs )
 {
    this -> sizeX = sizeX;
    this -> sizeY = sizeY;
@@ -14,13 +14,13 @@ Field::Field( int sizeX, int sizeY, int amountOfBombs )
    generatedField.prepareArray();
    generatedField.putBombs();
    generatedField.calcAmountOfBombsAround();
-   
+   field = generatedField.getField();
 }
 void Field::changeFlag( int x, int y )
 {
    field[y][x].changeFlag();
 };
-void Field::openCell( int x, int y )
+void Field::setOpened( int x, int y )
 {
    field[y][x].setOpened();
 };
@@ -39,4 +39,8 @@ int Field::getValue( int x, int y )
 bool Field::isFlag( int x, int y )
 {
    return field[y][x].isFlag();
-}
+};
+vector<vector<Cell>> Field::getField()
+{
+   return field;
+};

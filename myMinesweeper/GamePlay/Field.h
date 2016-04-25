@@ -13,12 +13,13 @@ private:
    int sizeY;
    int amountOfBombs;
 public:
-   Field( int sizeX, int sizeY, int amountOfBombs );
+   void createField( int sizeX, int sizeY, int amountOfBombs );
    void changeFlag( int x, int y );
-   void openCell( int x, int y );
+   void setOpened( int x, int y );
    int getValue( int x, int y );
    bool isOpened( int x, int y );
    bool isBomb( int x, int y );
    bool isFlag( int x, int y );
+   vector<vector<Cell>> getField();
 };
 
