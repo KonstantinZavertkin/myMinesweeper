@@ -66,10 +66,11 @@ namespace TestGamePlay
              for( int i = 0; i < sizeX; ++i )
              {
                 Assert::IsFalse( field[j][i].isOpened(), L"message", LINE_INFO() );
+                Assert::IsFalse( field[j][i].isFlag(), L"message", LINE_INFO() );
              }
           };
        };
-       TEST_METHOD( TestAmountOfBombs )
+       TEST_METHOD( TestAmountOfPushedBombs )
        {
           int sizeX = 10;
           int sizeY = 10;
@@ -91,6 +92,44 @@ namespace TestGamePlay
              }
           };
           Assert::AreEqual( amountOfBombs, trueAmountOfBombs );
+       };
+       TEST_METHOD( TestCalcOfBombsAroundOfCell )
+       {
+          int sizeX = 10;
+          int sizeY = 10;
+          int amountOfBombs = 10;
+          int trueAmountOfBombs;
+          int checkingAmountOfBombs;
+
+          FieldGenerator fieldGenerator( sizeX, sizeY, amountOfBombs );
+          vector<vector<Cell>> field;
+          fieldGenerator.prepareArray();
+          fieldGenerator.putBombs();
+          fieldGenerator.calcAmountOfBombsAround();
+          field = fieldGenerator.getField();
+
+          for( int j = 0; j < sizeY; j++ )
+          {
+             for( int i = 0; i < sizeX; i++ )
+             {
+                checkingAmountOfBombs = field[i][j].getNumOfBombsAround();
+                trueAmountOfBombs = 0;
+                for( int y = ( j - 1 ); y < ( j + 2 ); y++ )
+                {
+                   for( int x = ( i - 1 ); x < ( i + 2 ); x++ )
+                   {
+                      if( ( x >= 0 ) && ( x < sizeX ) && ( y >= 0 ) && ( y < sizeY ) )
+                      {
+                         if( field[x][y].isBomb() )
+                         {
+                            ++trueAmountOfBombs;
+                         }
+                      }
+                   }
+                }
+                Assert::AreEqual( checkingAmountOfBombs, trueAmountOfBombs );
+             }
+          }
        };
     };
 }
