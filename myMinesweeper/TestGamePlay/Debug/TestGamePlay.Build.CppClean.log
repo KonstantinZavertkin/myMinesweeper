@@ -1,13 +1,14 @@
 C:\MYPROGRAMS\MYMINESWEEPER\MYMINESWEEPER\TESTGAMEPLAY\DEBUG\TESTGAMEPLAY.PCH
 C:\MYPROGRAMS\MYMINESWEEPER\MYMINESWEEPER\TESTGAMEPLAY\DEBUG\PCH.OBJ
 C:\MYPROGRAMS\MYMINESWEEPER\MYMINESWEEPER\TESTGAMEPLAY\DEBUG\VC110.PDB
-C:\MYPROGRAMS\MYMINESWEEPER\MYMINESWEEPER\TESTGAMEPLAY\DEBUG\UNITTEST1.OBJ
+C:\MYPROGRAMS\MYMINESWEEPER\MYMINESWEEPER\TESTGAMEPLAY\DEBUG\TESTGAMELOGIC.OBJ
 C:\MYPROGRAMS\MYMINESWEEPER\MYMINESWEEPER\DEBUG\TESTGAMEPLAY\TESTGAMEPLAY.ILK
 C:\MYPROGRAMS\MYMINESWEEPER\MYMINESWEEPER\DEBUG\TESTGAMEPLAY\TESTGAMEPLAY.DLL
 C:\MYPROGRAMS\MYMINESWEEPER\MYMINESWEEPER\DEBUG\TESTGAMEPLAY\TESTGAMEPLAY.WINMD
 C:\MYPROGRAMS\MYMINESWEEPER\MYMINESWEEPER\DEBUG\TESTGAMEPLAY\TESTGAMEPLAY.PDB
 C:\myPrograms\myMinesweeper\myMinesweeper\Debug\TestGamePlay\TestGamePlay.lib
 C:\myPrograms\myMinesweeper\myMinesweeper\Debug\TestGamePlay\TestGamePlay.exp
+C:\myPrograms\myMinesweeper\myMinesweeper\TestGamePlay\Debug\TestGamePlay.vcxprojResolveAssemblyReference.cache
 C:\myPrograms\myMinesweeper\myMinesweeper\TestGamePlay\Debug\Microsoft.VisualStudio.TestPlatform.Core\en-US\Microsoft.VisualStudio.TestPlatform.Core.Resources.resw
 C:\myPrograms\myMinesweeper\myMinesweeper\TestGamePlay\Debug\Microsoft.VisualStudio.TestPlatform.ObjectModel\en-US\Microsoft.VisualStudio.TestPlatform.ObjectModel.CommonResources.resw
 C:\myPrograms\myMinesweeper\myMinesweeper\TestGamePlay\Debug\Microsoft.VisualStudio.TestPlatform.ObjectModel\en-US\Microsoft.VisualStudio.TestPlatform.ObjectModel.EqtMessages.resw
@@ -61,7 +62,7 @@ C:\myPrograms\myMinesweeper\myMinesweeper\TestGamePlay\Debug\ProjectArchitecture
 C:\myPrograms\myMinesweeper\myMinesweeper\Debug\TestGamePlay\AppxManifest.xml
 C:\myPrograms\myMinesweeper\myMinesweeper\Debug\TestGamePlay\TestGamePlay.build.appxrecipe
 C:\myPrograms\myMinesweeper\myMinesweeper\TestGamePlay\Debug\pch.obj
-C:\myPrograms\myMinesweeper\myMinesweeper\TestGamePlay\Debug\unittest1.obj
+C:\myPrograms\myMinesweeper\myMinesweeper\TestGamePlay\Debug\TestGameLogic.obj
 C:\myPrograms\myMinesweeper\myMinesweeper\TestGamePlay\Debug\cl.command.1.tlog
 C:\myPrograms\myMinesweeper\myMinesweeper\TestGamePlay\Debug\CL.read.1.tlog
 C:\myPrograms\myMinesweeper\myMinesweeper\TestGamePlay\Debug\CL.write.1.tlog

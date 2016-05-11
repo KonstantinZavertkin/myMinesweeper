@@ -11,7 +11,6 @@ class MinesweeperGame
    int amountOfBombs;
    bool gameOver;
 public:
-   //MinesweeperGame(StepAction stepAction);
    void initializeField( int sizeX, int sizeY, int amountOfBombs );
    void performStep( int x, int y, char action );
    bool isGameOver();

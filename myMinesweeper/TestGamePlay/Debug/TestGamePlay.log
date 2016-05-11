@@ -1,2 +1,4 @@
-﻿     Creating library C:\myPrograms\myMinesweeper\myMinesweeper\Debug\TestGamePlay\TestGamePlay.lib and object C:\myPrograms\myMinesweeper\myMinesweeper\Debug\TestGamePlay\TestGamePlay.exp
-  TestGamePlay.vcxproj -> C:\myPrograms\myMinesweeper\myMinesweeper\Debug\TestGamePlay\TestGamePlay.dll
+﻿  pch.cpp
+  GameLogicTest.cpp
+     Creating library C:\myPrograms\myMinesweeper\myMinesweeper\Debug\TestGamePlay\GamePlayTest.lib and object C:\myPrograms\myMinesweeper\myMinesweeper\Debug\TestGamePlay\GamePlayTest.exp
+  TestGamePlay.vcxproj -> C:\myPrograms\myMinesweeper\myMinesweeper\Debug\TestGamePlay\GamePlayTest.dll

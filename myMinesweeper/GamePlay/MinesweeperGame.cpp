@@ -3,17 +3,12 @@
 #include "Field.h"
 #include "StepAction.h"
 
-/*MinesweeperGame::MinesweeperGame( StepAction stepAction )
-{
-   
-};*/
 void MinesweeperGame::initializeField( int sizeX, int sizeY, int amountOfBombs )
 {
    gameOver = false;
    Field field;
    field.createField( sizeX, sizeY, amountOfBombs );
    this -> field = field;
-   //StepAction stepAction( sizeX, sizeY, field );
    StepAction stepAction;
    stepAction.initialStepAction( sizeX, sizeY, field );
    this -> stepAction = stepAction;

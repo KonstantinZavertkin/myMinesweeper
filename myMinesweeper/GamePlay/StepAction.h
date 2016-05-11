@@ -1,5 +1,6 @@
 #pragma once
 #include "Field.h"
+#include <iostream>
 
 class StepAction
 {
@@ -8,8 +9,8 @@ private:
    int sizeX;
    int sizeY;
    char currentAction;
-   int square( int x, int y, char type );
-   void tryOpen( int x, int y, char type );
+   int getAmountOfFlagsInSquare( int x, int y );
+   void tryOpen( int x, int y );
 public:
    void initialStepAction( int sizeX, int sizeY, Field field );
    void performAction( int x, int y, char currentAction );
